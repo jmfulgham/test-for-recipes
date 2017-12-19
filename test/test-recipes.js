@@ -55,7 +55,7 @@ describe('Recipes', function(){
         return chai.request(app)
         .get('/recipes')
         .then(function(item){
-            updatedID=item.body.id;
+            updatedID=item.body.id
             .send(updatedID);
             return chai.request(app)
         .put(`/recipes/${updatedID}`)
